@@ -1,6 +1,6 @@
 extern crate rand;
 
-pub fn selection_sort(mut v: Vec<i32>) -> Vec<i32> {
+pub fn selection_sort<T: Ord>(mut v: Vec<T>) -> Vec<T> {
     let mut min;
     for i in 0..v.len() {
         min = i;
@@ -14,7 +14,7 @@ pub fn selection_sort(mut v: Vec<i32>) -> Vec<i32> {
     v
 }
 
-pub fn insertion_sort(mut v: Vec<i32>) -> Vec<i32> {
+pub fn insertion_sort<T: Ord>(mut v: Vec<T>) -> Vec<T> {
     let mut j;
     for i in 1..v.len() {
         j = i;
@@ -26,7 +26,7 @@ pub fn insertion_sort(mut v: Vec<i32>) -> Vec<i32> {
     v
 }
 
-pub fn shell_sort(mut v: Vec<i32>) -> Vec<i32> {
+pub fn shell_sort<T: Ord>(mut v: Vec<T>) -> Vec<T> {
     let n = v.len();
     let mut h = 1;
     while h < n {
