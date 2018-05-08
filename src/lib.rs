@@ -6,7 +6,7 @@ pub struct UF {
 }
 
 impl UF {
-    pub fn new(n: usize) -> UF {
+    pub fn new(n: usize) -> Self {
         UF {
             id: (0..n).collect(),
             count: n,
