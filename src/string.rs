@@ -1,8 +1,4 @@
-extern crate rand;
-
-pub mod uf;
-pub mod sort;
-pub mod string;
+pub fn naive_string_search(pat: String) -> bool {true}
 
 #[cfg(test)]
 mod tests {
