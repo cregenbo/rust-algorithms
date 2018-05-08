@@ -1,4 +1,3 @@
-extern crate rand;
 
 pub fn selection_sort<T: Ord>(mut v: Vec<T>) -> Vec<T> {
     let mut min;
@@ -49,6 +48,8 @@ pub fn shell_sort<T: Ord>(mut v: Vec<T>) -> Vec<T> {
 mod tests {
 
     use super::*;
+
+    use rand;
     use rand::Rng;
 
     #[test]
