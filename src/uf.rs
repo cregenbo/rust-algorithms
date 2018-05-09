@@ -1,11 +1,12 @@
-pub struct UF {
+pub struct QuickFind {
     id: Vec<usize>,
     count: usize,
 }
 
-impl UF {
+
+impl QuickFind {
     pub fn new(n: usize) -> Self {
-        UF {
+        QuickFind {
             id: (0..n).collect(),
             count: n,
         }
@@ -42,7 +43,7 @@ mod tests {
 
     #[test]
     fn union_find_tests() {
-        let mut uf = UF::new(10);
+        let mut uf = QuickFind::new(10);
         assert_eq!(uf.count(), 10);
         uf.union(5, 3);
         assert!(uf.connected(5, 3));
